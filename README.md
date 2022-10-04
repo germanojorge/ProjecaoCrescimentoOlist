@@ -57,7 +57,7 @@ De acordo com as informações da empresa contidas no Kaggle, o funil de marketi
  - **Dados das Etapa 0 e 1**: Informações extraídas através do Google Analytics. Neste projeto utilizaremos dados fictícios. As métricas são: valor do investimento, CPC (custo por click), clicks, usuários, sessões e taxa de conversão para o Google Search, Google Display, Facebook, Email e Outros.
  - **Dados das Etapas 2 e 3**: Taxa de conversão de ligações e fechamento de negócios. Usaremos o conjunto de dados fornecido pelo Kaggle que contém informações como quantidade de leads, data de fechamento, id de representante de vendas. Calcularemos a taxa de conversão.
 ----------------------------------------------
-O processo pde ser resumido na figura a seguir:
+O processo pode ser resumido na figura a seguir:
 ![funil](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/funilmarketing.png)
 
  
