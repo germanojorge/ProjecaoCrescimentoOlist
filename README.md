@@ -51,14 +51,20 @@ De acordo com as informações da empresa contidas no Kaggle, o funil de marketi
 > Contudo, devemos pressupor que o cliente passa por uma etapa anterior à etapa 1, que o leva a entrar no site da empresa, isto é, trata-se do canal de tráfego/marketing da empresa que o levou a conhecê-la. Este tipo de tráfego pode ser pago, realizado pela empresa em investimentos para pesquisas do Google (Google Search e Google Display), ou por meio de propagandas pelo Facebook (Facebook ads), por exemplo. Já o tráfego orgânico geralmente é feito com blogs, emails e outros. Chamaremos esta de Etapa 0. Assim: 
 
   -  **Etapa 0:** O cliente passa por um tráfego, pago ou orgânico, que o leva até o site da empresa.
- #### 1.1 Dados 
+  
+  
+### 2. Conjuntos de dados 
  Extrairemos os seguintes dados das respectivas etapas:
  
- - **Dados das Etapa 0 e 1**: Informações extraídas através do Google Analytics. Neste projeto utilizaremos dados fictícios. As métricas são: valor do investimento, CPC (custo por click), clicks, usuários, sessões e taxa de conversão para o Google Search, Google Display, Facebook, Email e Outros.
- - **Dados das Etapas 2 e 3**: Taxa de conversão de ligações e fechamento de negócios. Usaremos o conjunto de dados fornecido pelo Kaggle que contém informações como quantidade de leads, data de fechamento, id de representante de vendas. Calcularemos a taxa de conversão.
+ - **Dados das Etapa 0 e 1**: https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/olist_trafego_pago_e_organico.xlsx Informações extraídas através do Google Analytics. Neste projeto utilizaremos dados fictícios. As métricas são: valor do investimento, CPC (custo por click), clicks, usuários, sessões e taxa de conversão para o Google Search, Google Display, Facebook, Email e Outros.
+ 
+ - **Dados das Etapas 2 e 3**: https://github.com/germanojorge/ProjecaoCrescimentoOlist/tree/main/leads%20e%20vendas%20olist%20csv Taxa de conversão de ligações e fechamento de negócios. Usaremos o conjunto de dados fornecido pelo Kaggle que contém informações como quantidade de leads, data de fechamento, id de representante de vendas. Calcularemos a taxa de conversão.
 ----------------------------------------------
-O processo pode ser resumido na figura a seguir:
+Dessa forma, o processo do negócio e seus dados podem ser resumidos através da figura a seguir:
 ![funil](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/funilmarketing.png)
+
+
+### 3. Limpeza e normalização dos dados
 
  
  
