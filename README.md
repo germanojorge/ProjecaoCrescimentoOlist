@@ -61,7 +61,7 @@ De acordo com as informações da empresa contidas no Kaggle, o funil de marketi
  - **Dados das Etapas 2 e 3**: https://github.com/germanojorge/ProjecaoCrescimentoOlist/tree/main/leads%20e%20vendas%20olist%20csv Taxa de conversão de ligações e fechamento de negócios. Usaremos o conjunto de dados fornecido pelo Kaggle que contém informações como quantidade de leads, data de fechamento, id de representante de vendas. Calcularemos a taxa de conversão.
 ----------------------------------------------
 Dessa forma, o processo do negócio e seus dados podem ser resumidos através da figura a seguir:
-![funil](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/funilmarketing.png)
+![funil](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/funilmarketing.png)
 
 
 ### 3. Limpeza e normalização dos dados
