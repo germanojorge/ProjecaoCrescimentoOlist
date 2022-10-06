@@ -65,7 +65,33 @@ Dessa forma, o processo do negócio e seus dados podem ser resumidos através da
 
 
 ### 3. Limpeza e normalização dos dados
+- Primeiro, faça o download da pasta **leads e vendas olist csv**
+- Em seguida, abra o google colaboratory (https://colab.research.google.com/)
 
- 
- 
- 
+Começamos por importar as bibliotecas. O pandas nos ajudará na leitura e manipulação dos dados, enquanto o datetime é utilizado para alteração no formato da data.
+
+``` python
+import pandas as pd
+import datetime as dt
+``` 
+Em seguida, vamos fazer o upload dos arquivos para o google colab:
+``` python
+from google.colab import files
+uploaded = files.upload()
+``` 
+Procure por eles no seu diretório e adicione-os.
+
+-----------------------------------------------
+
+Essas duas linhas a seguir vão fazer com que o pandas leia seu arquivo em csv e o converta em um dataframe.
+``` python
+leads = pd.read_csv("olist_marketing_qualified_leads_dataset.csv")
+deals = pd.read_csv("olist_closed_deals_dataset.csv")
+```
+----------------------------------------
+
+Quer dar uma olhada como ficou? É só digitar:
+
+```python
+leads.head()
+```
