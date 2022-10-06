@@ -95,3 +95,47 @@ Quer dar uma olhada como ficou? É só digitar:
 ```python
 leads.head()
 ```
+![leads](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/pythonleadshead.JPG)
+
+```python
+deals.head()
+```
+![deals](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/pythondealshead.JPG)
+
+-----------------------------------------------
+
+Agora fazemos uma cópia para preservar os originais.
+
+```python
+qualified_leads = leads.copy()
+closed_deals = deals.copy()
+```
+
+Depois, vamos renomear as colunas "mql_id, ar_id,sdr_id" para nomes mais fáceis de reconhecer:
+
+```python
+qualified_leads = qualified_leads.rename(columns={'mql_id': 'Marketing Lead id', 'origin': 'origem'})
+closed_deals = closed_deals.rename(columns={'mql_id': 'Marketing Lead id', 'ar_id': 'Sales Representative','sdr_id':'Sales Devevelopment id'})
+```
+
+Hora de juntar as duas tabelas em uma só, nosso tabelão:
+
+```python
+tabelao=pd.merge(qualified_leads, closed_deals, on='Marketing Lead id', how='left')
+```
+------------------------
+
+Quase pronto! falta só colocar as datas "first_contact_date" e "won_date" em mês, pra isso vamos usar datetime como dt e chamar seu método "to_period('M')": 
+
+```python
+tabelao['month_year_first_contact'] = pd.to_datetime(tabelao['first_contact_date']).dt.to_period('M')
+tabelao['month_year_won_date'] = pd.to_datetime(tabelao['won_date']).dt.to_period('M')
+```
+------------------------
+
+Agora é só exportar no formato de um arquivo excel, com a função "to_excel".
+
+```python
+tabelao_excel = tabelao.to_excel("leads e vendas.xlsx")
+files.download(tabelao_excel)
+```
