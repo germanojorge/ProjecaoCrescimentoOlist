@@ -247,3 +247,8 @@ Para o Google Search, Google Display e Facebook, coloque para cada um os valores
 ![pagofinal](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/pagofinal.JPG)
 
 
+#### 5.2 Cálculo de CPC
+Há diferentes maneiras de calcular o custo por click, discutiremos algumas delas e justificaremos sua escolha.
+
+- **Google Search:**
+
