@@ -183,3 +183,17 @@ Se filtrarmos por "Email", o resultado é:
 ### Já preparamos nossos dados, agora vamos colocá-los na nossa planilha final.
 
 ### 4. Criação da planilha final
+- Começando pelo tráfego orgânico, nas linhas coloque a origem de tráfego, como **e-mail**, seguido de suas sessões, taxa de conversão da página e total de leads. Como colunas adicione os meses. Faça o mesmo para a origem **orgânico**. Sua planilha deve ficar da seguinte forma:
+
+![organico](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/organicofinal.JPG)
+
+-----------------------------
+
+- Vamos utilizar os dados do arquivo **olist_trafego_pago_e_organico** para preencher as informações de sessões e taxa de conversão. O total de leads é a multiplicação desses campos. Depois de feito isso para as duas, você obterá:
+![organico2](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/organicofinal2.JPG)
+
+----------------------------
+
+#### 4.1 Regressão Linear - Orgânico
+Para prever os valores futuros de leads, vamos utilizar o método de regressão linear
+- Escolha organico ou email, selecione os meses e o total de leads (utilize a tecla ctrl) e insira um gráfico de dispersão, depois clique nas "bolinhas" do gráfico e adicione uma linha de tendência. Nas opções de linha de tendência selecione "Exibir equação no gráfico" e "Exibir valor de R-quadrado no gráfico".
