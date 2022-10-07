@@ -139,3 +139,47 @@ Agora é só exportar no formato de um arquivo excel, com a função "to_excel".
 tabelao_excel = tabelao.to_excel("leads e vendas.xlsx")
 files.download(tabelao_excel)
 ```
+Ao abrir o tabelao no excel, você deverá ver isto:
+![excelpython](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/excelpython.JPG)
+-------------------------
+
+Certo, vamos fazer algumas alterações.
+- Primeiro, vamos excluir a primeira coluna, que contém somente o número das linhas. Clique com o botão direito > excluir..>coluna inteira
+- Então, vamos transformar os dados em uma tabela. Selecione todas as colunas e linhas e clique em inserir no menu superior, depois em tabela.
+![tabela](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/tabelaexcel.JPG)
+Fica mais fácil de manipular os dados em formato de tabela.
+- É necessário verificar a qualidade dos nossos dados. Para isso, vamos pesquisar através dos filtros (as setas ao lado do título da coluna). Procure por campos vazios ou nulos. Você perceberá que as 3 primeiras colunas estão ok, contudo, a coluna origem contém dados como *"other", "other publicities","unknown" e campos vazios*.
+- Em uma situação real, o indicado é verificar com o dono dos dados ou alguma área da empresa para descobrir o que esses campos representam. No nosso projeto vamos **supor** que tratam-se do **tráfego orgânico**, com excessão de **other_publicities**, que serão os dados para o **facebook**.
+- Use a função "Localizar e substituir" do excel para substituir todos os dados marcados como *other_publicities* por *facebook*
+![localizar](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/localizar.JPG)
+
+-----------------------------------
+
+- Agora vamos inserir uma coluna nova chamada "origem-editado" e em seus campos vamos adicionar a seguinte fórmula: **=SE(OU([@origem]="unknown";[@origem]="";[@origem]="other");"Organico";[@origem])**. Isto fará com que os campos *"other", "other publicities","unknown" e campos vazios* tornem-se "*Organico*"
+![origem](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/origem.JPG)
+
+---------------------
+
+- Quase lá! Percebeu que há uma coluna com os "ids" do lead, mas não uma com os leads em si? Pois vamos criá-la. Crie uma nova coluna chamada "Leads" e popule-a com "1" de acordo com o numero de linhas da coluna *"Marketing Lead id"*, que é de 8000.
+- Também queremos saber a quantidade de pessoas convertidas. Para isso é só verificar a quantidade de *"won_date"*, que é a data de fechamento de contrato. Faça uma coluna com a seguinte fórmula: **=SE([@[month_year_won_date]]<>””;1;0)** Traduzindo: Se o mês de fechamento for diferente de vazio, coloque "1", senão "0".
+- Falta apenas uma métrica muita importante: a **taxa de conversão de vendas**. Insira uma tabela dinâmica  com os campos iguais aos da figura a seguir:
+
+![dinamica](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/dinamica.JPG)
+
+----------------------------
+
+Se filtrarmos por "Email", o resultado é:
+
+![dinamicaemail](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/dinamicaemail.JPG)
+
+- Faça isso para com os filtros "Google Search", "Google Display", "Facebook" e "Others". Você pode salvar cada tabela numa aba diferente, mas é importante que guardemos esses dados para transpô-los na nossa tabela final.
+
+- Terminamos com os dados fornecidos pelo Kaggle, agora vamos olhar nossos dados fictícios do Google Analytics.
+
+- Por sorte nossos dados do arquivo **olist_trafego_pago_e_organico** estão completos e limpos, como podemos ver:
+
+![trafego](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/trafego.JPG)
+
+### Já preparamos nossos dados, agora vamos colocá-los na nossa planilha final.
+
+### 4. Criação da planilha final
