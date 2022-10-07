@@ -182,7 +182,7 @@ Se filtrarmos por "Email", o resultado é:
 
 ### Já preparamos nossos dados, agora vamos colocá-los na nossa planilha final.
 
-### 4. Criação da planilha final
+### 4. Planilha final - Orgânico
 - Começando pelo tráfego orgânico, nas linhas coloque a origem de tráfego, como **e-mail**, seguido de suas sessões, taxa de conversão da página e total de leads. Como colunas adicione os meses. Faça o mesmo para a origem **orgânico**. Sua planilha deve ficar da seguinte forma:
 
 ![organico](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/organicofinal.JPG)
@@ -196,4 +196,28 @@ Se filtrarmos por "Email", o resultado é:
 
 #### 4.1 Regressão Linear - Orgânico
 Para prever os valores futuros de leads, vamos utilizar o método de regressão linear
-- Escolha organico ou email, selecione os meses e o total de leads (utilize a tecla ctrl) e insira um gráfico de dispersão, depois clique nas "bolinhas" do gráfico e adicione uma linha de tendência. Nas opções de linha de tendência selecione "Exibir equação no gráfico" e "Exibir valor de R-quadrado no gráfico".
+- Escolha organico ou email, selecione os meses e o total de leads
+
+------------
+
+![meslead](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/meslead.JPG)
+
+------------
+
+- insira um gráfico de dispersão, depois clique nas "bolinhas" do gráfico e adicione uma linha de tendência. Nas opções de linha de tendência selecione "Exibir equação no gráfico" e "Exibir valor de R-quadrado no gráfico".
+
+--------
+
+![graficorganico](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/graficoorganico.JPG)
+
+-----------------
+
+
+- O valor de R representa a correlação entre as variáveis. Uma correlação de 75% é ok. A equação que descreve a linha é a que iremos utilizar para calcular os leads dos meses futuros, de modo que y=ax+b, em que x são os meses. Dessa forma para o mês 13 temos: **total de leads = 91,382 * 13 + (-26,836) = 1161**
+
+- Olhando para os nossos valores, pode-se perceber que a taxa de conversão é estável, assim assumiremos o valor do último mês. Por fim, para prever o número de sessões basta usar o nosso total de lead previstos e dividir pela taxa de conversão. Faça o mesmo para E-mail. Assim:
+
+----------
+
+![organicofinal3](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/organicofinal3.JPG)
+
