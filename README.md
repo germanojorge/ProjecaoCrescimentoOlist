@@ -156,6 +156,9 @@ Fica mais fácil de manipular os dados em formato de tabela.
 -----------------------------------
 
 - Agora vamos inserir uma coluna nova chamada "origem-editado" e em seus campos vamos adicionar a seguinte fórmula: **=SE(OU([@origem]="unknown";[@origem]="";[@origem]="other");"Organico";[@origem])**. Isto fará com que os campos *"other", "other publicities","unknown" e campos vazios* tornem-se "*Organico*"
+
+----------------------
+
 ![origem](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/origem.JPG)
 
 ---------------------
@@ -189,7 +192,16 @@ Se filtrarmos por "Email", o resultado é:
 
 -----------------------------
 
-- Vamos utilizar os dados do arquivo **olist_trafego_pago_e_organico** para preencher as informações de sessões e taxa de conversão. O total de leads é a multiplicação desses campos. Depois de feito isso para as duas, você obterá:
+- Vamos utilizar os dados do arquivo **olist_trafego_pago_e_organico** para preencher as informações de sessões e taxa de conversão.
+
+- Lembra do nosso tabelao? crie uma tabela dinamica para descobrir o total de leads, certificando-se de filtrar a origem somente com os organicos (não inclua o e-mail)
+
+
+![somaorg](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/somaleadorg.JPG)
+
+
+- Sua planilha deve ficar assim:
+
 ![organico2](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/organicofinal2.JPG)
 
 ----------------------------
@@ -220,4 +232,18 @@ Para prever os valores futuros de leads, vamos utilizar o método de regressão 
 ----------
 
 ![organicofinal3](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/organicofinal3.JPG)
+
+#### Pronto, acabamos a projeção de leads de tráfego orgânico, falta prever o pago.
+
+### 5. Planilha final - Pago
+Para o Google Search, Google Display e Facebook, coloque para cada um os valores de investimento, cpc, click e conversão da página retirados do arquivo **olist_trafego_pago_e_organico**. 
+
+- O total de leads é retirado da tabela dinamica do tabelao, como foi com o e-mail e organico.
+
+![leadpago](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/leadpago.JPG)
+
+- Sua planilha deve ficar dessa forma:
+
+![pagofinal](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/pagofinal.JPG)
+
 
