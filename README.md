@@ -97,6 +97,7 @@ leads.head()
 ```
 ![leads](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/pythonleadshead.JPG)
 
+
 ```python
 deals.head()
 ```
