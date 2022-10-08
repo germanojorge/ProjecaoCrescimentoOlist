@@ -247,8 +247,61 @@ Para o Google Search, Google Display e Facebook, coloque para cada um os valores
 ![pagofinal](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/pagofinal.JPG)
 
 
-#### 5.2 Cálculo de CPC
-Há diferentes maneiras de calcular o custo por click, discutiremos algumas delas e justificaremos sua escolha.
+#### 5.2 Projeção de CPC
+Há diferentes maneiras de prever o custo por click, discutiremos algumas delas e justificaremos sua escolha.
 
-- **Google Search:**
+- **Google Search:** Caso a empresa possua um Google Analytics, O CPC pode ser estimado facilmente através da ferramenta **Google Adwords Keywords Planner**, que faz uma projeção de acordo com o investimento. Neste trabalho iremos supor que *5% de investimento* proporcionará um aumento de *1% de CPC*.
 
+- **Google Display:** Como temos poucos dados para tentar uma regressão linear, iremos trabalhar com um **Chute do Gestor**. O gestor de tráfego vai nos dizer a porcentagem de investimentos necessária para um aumento do CPC. Normalmente, isto funciona bem para empresas pequenas ou médias. Iremos supor que *5% de investimento* proporcionará um aumento de *1% de CPC*.
+
+- **Facebook:** Utilizaremos uma *regressão linear* calculada a partir de custo de investimento e CPC. **iremos supor um investimento de 7% O gráfico que obtemos é o seguinte:
+
+![regressaofacebook](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/regressaofacebook.JPG)
+
+Resumo
+-------------
+
+#### Google Search.
+
+- Investimento: 5%
+- CPC: +1%
+- Clicks: Investimento / CPC
+- Conversão da Página: Último mês
+- **Total de Leads:** Clicks * Conversão
+
+#### Google Display.
+
+- Investimento: 5%
+- CPC: +1%
+- Clicks: Investimento / CPC
+- Conversão da Página: Último mês
+- **Total de Leads:** Clicks * Conversão
+
+#### Facebook.
+- Investimento: 7%
+- CPC: ax+b (regressão linear)
+- Clicks: Investimento / CPC
+- Conversão da Página: Último mês
+- **Total de Leads:** Clicks * Conversão
+Utilizando essas métricas, você obterá a seguinte planilha:
+
+![projecaopago](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/projecaopago.JPG)
+
+
+### 6. Projeção de vendas.
+Chegamos na reta final da nossa projeção! Agora ficou fácil, utilize o total de leads obtido com as projeções anteriores, adicione uma taxa de conversão baseada numa **média móvel** dos 3 meses anteriores. O seu total de vendas é a multiplicação de leads pela conversão.
+
+![desempenhovendas](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/desempenhovendas.JPG)
+
+
+### 7. Gráficos
+
+![grafico1](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/grafico1.png)
+
+--------------------
+
+![grafico2](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/grafico2.png)
+
+Fim
+-----------
+O projeto utilizou excel, python, regressão linear e média móvel para prever o crescimento de vendas da empresa Olist. Espero que você tenha aprendido um pouco sobre essas ferramentas. Até mais :)
