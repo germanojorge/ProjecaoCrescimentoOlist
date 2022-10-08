@@ -203,7 +203,7 @@ Se filtrarmos por "Email", o resultado é:
 
 - Sua planilha deve ficar assim:
 
-![organico2](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/organicofinal2.JPG)
+<img src="https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/organicofinal2.JPG" width="600">
 
 ----------------------------
 
