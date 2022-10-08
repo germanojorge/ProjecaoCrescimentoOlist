@@ -212,7 +212,7 @@ Para prever os valores futuros de leads, vamos utilizar o método de regressão 
 
 ------------
 
-![meslead](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/meslead.JPG)
+<img src= "https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/meslead.JPG" width="300">
 
 ------------
 
@@ -220,7 +220,7 @@ Para prever os valores futuros de leads, vamos utilizar o método de regressão 
 
 --------
 
-![graficorganico](https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/graficoorganico.JPG)
+<img src= "https://github.com/germanojorge/ProjecaoCrescimentoOlist/blob/main/public/graficoorganico.JPG" width="500">
 
 -----------------
 
